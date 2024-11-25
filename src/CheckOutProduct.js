@@ -1,29 +1,33 @@
 import React from 'react';
 import "./CheckOutProduct.css";
 
-export default function CheckOutProduct() {
+export default function CheckOutProduct({ id, image, title, price, rating }) {
   return (
-    <div className="checkoutproduct">
+    <div className="checkoutProduct">
       <img
-        src="https://lifemobile.lk/wp-content/uploads/2023/06/01-89.jpg"
+        src={image}
         alt="Product"
         className="checkoutProduct_image"
       />
 
-      <div className="checkoutproduct_info">
+      <div className="checkoutProduct_info">
         <p className="checkoutProduct_title">
-          Bennett Mystic 15.6 inch laptop shoulder messenger sling office bag, Water repellent fabric for men and women
-          (Blue)
+          {title}
         </p>
         <p className="checkoutProduct_price">
           <small>$</small>
-          <strong>20</strong>
+          <strong>{price}</strong>
         </p>
-        <div className="checkoutProduct_rating">⭐⭐⭐</div>
+        <div className="checkoutProduct_rating">
+          {Array(rating)
+            .fill()
+            .map((_, i) => (
+              <span key={i}>⭐</span>
+            ))}
+        </div>
         <button>Remove from Basket</button>
       </div>
     </div>
-
-    
   );
 }
+
