@@ -15,6 +15,7 @@ export default function CheckOut() {
              </h2>
              <CheckOutProduct/>
              <CheckOutProduct/>
+             <CheckOutProduct/>
           </div>
       </div>
 

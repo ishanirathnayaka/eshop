@@ -23,5 +23,7 @@ export default function CheckOutProduct() {
         <button>Remove from Basket</button>
       </div>
     </div>
+
+    
   );
 }
