@@ -2,34 +2,48 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 200px;
-  padding: 10px;
-  background-color: rgb(249, 249, 249);
-  border: 1px solid #dddddd;
-  border-radius: 3px;
+  align-items: flex-start; /* Align text and elements to the left */
+  width: 250px; /* Adjust width for better spacing */
+  padding: 15px; /* Add more padding for cleaner layout */
+  background-color: #f3f3f3; /* Match the light gray background */
+  border: 1px solid #ddd; /* Subtle border */
+  border-radius: 5px; /* Slightly rounded corners */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+.subtotal p {
+  font-size: 16px; /* Readable font size */
+  color: #111; /* Darker text color */
+  margin: 5px 0; /* Space between lines */
 }
 
 .subtotal p strong {
-  font-size: 1.2em;
-  color: #090707;
+  font-size: 18px; /* Larger font for price */
+  color: #111; /* Bold and dark for emphasis */
 }
 
 .subtotal_gift {
   display: flex;
-  align-items: center;
+  align-items: center; /* Align checkbox and text */
+  margin: 10px 0; /* Space above and below the gift option */
 }
 
 .subtotal_gift > input {
-  margin-right: 5px;
+  margin-right: 8px; /* Add spacing between checkbox and label */
 }
 
 .subtotal > button {
-    background: #ff9f00;
-    border-radius: 2px;
-    width: 100%;
-    height: 30px;
-    border: 1px solid;
-    margin-top: 10px;
-    border-color: #a88734 #9c7e31 #846a29;
-    color: #111;
+  background-color: #ff9900; /* Bright orange button color */
+  border-radius: 4px; /* Slightly rounded corners */
+  width: 100%; /* Full width */
+  height: 40px; /* Taller button for better usability */
+  border: 1px solid #a88734; /* Slightly darker border for contrast */
+  color: #111; /* Text color */
+  font-weight: bold; /* Emphasize text */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.subtotal > button:hover {
+  background-color: #e68a00; /* Darker orange on hover */
 }

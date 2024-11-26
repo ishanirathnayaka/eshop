@@ -7,16 +7,16 @@ import { Link } from "react-router-dom";
 import { useStateValue } from './StateProvider';
 
 export default function Header() {
-  const[{basket}, dispatch] = useStateValue();
+  const [{ basket }, dispatch] = useStateValue();
+
   return (
     <div className="header">
-      <Link to ="/" style={{ textDecoration:"none"}}>
+      <Link to="/" style={{ textDecoration: "none" }}>
         <div className="header_logo">
           <StorefrontIcon className="header_logoImage" fontSize="large" />
           <h2 className="header_logoTitle">eShop</h2>
         </div>
       </Link>
-      
 
       <div className="header_search">
         <input type="text" className="header_searchInput" />
@@ -24,10 +24,12 @@ export default function Header() {
       </div>
 
       <div className="header_nav">
-        <div className="nav_item">
-          <span className="nav_itemLineOne">Hello Guest</span>
-          <span className="nav_itemLineTwo">Sign In</span>
-        </div>
+        <Link to="/login" style={{ textDecoration: "none" }}>
+          <div className="nav_item">
+            <span className="nav_itemLineOne">Hello Guest</span>
+            <span className="nav_itemLineTwo">Sign In</span>
+          </div>
+        </Link>
 
         <div className="nav_item">
           <span className="nav_itemLineOne">Your</span>
@@ -37,11 +39,12 @@ export default function Header() {
         <Link to="/checkout" style={{ textDecoration: "none" }}>
           <div className="nav_item">
             <ShoppingBasket className="itemBasket" />
-            <span className="nav_itemLineTwo nav_basketCount">{basket.length}</span>
+            <span className="nav_itemLineTwo nav_basketCount">
+              {basket?.length || 0}
+            </span>
           </div>
         </Link>
       </div>
     </div>
   );
 }
-

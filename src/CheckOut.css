@@ -1,34 +1,48 @@
 .checkout {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between; /* Ensure sections have space between them */
     padding: 20px;
-    background-color: white;
-    height: max-content;
+    background-color: #fff; /* White background */
+    height: auto; /* Adjust height according to content */
+    box-sizing: border-box; /* Include padding in total width */
 }
-
-
-
-
 
 .checkout_title {
     margin-right: 10px;
     padding: 10px 0;
     border-bottom: 1px solid lightgray;
+    font-size: 24px; /* Adjust size to be more prominent */
+    font-weight: bold; /* Make title bold */
     height: max-content;
+    color: #111; /* Dark color for title text */
 }
 
 .checkout_left {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 70%; /* Ensure left section takes more space */
 }
 
-.checkout_ad{
-    width: 90%;
-    margin-bottom: 5px;
-    height: 150px;
+.checkout_ad {
+    width: 100%; /* Make ad span the full width */
+    height: 200px; /* Adjust height to match design */
+    background-color: #f3f3f3; /* Light gray background for the ad */
+    margin-bottom: 10px; /* Space between ad and next section */
+    border-radius: 5px; /* Optional rounded corners */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for the ad box */
 }
 
+.checkout_right {
+    width: 25%; /* Adjust right section to take up less space */
+    padding-left: 10px; /* Space between right section and content */
+}
 
-
-   
+.checkout_right .subtotal {
+    padding: 15px; /* Add padding inside subtotal */
+    background-color: #f9f9f9; /* Light background for subtotal */
+    border-radius: 5px; /* Rounded corners for subtotal box */
+    border: 1px solid #ddd; /* Subtle border */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}

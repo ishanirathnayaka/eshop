@@ -1,46 +1,56 @@
 .checkoutproduct {
   display: flex;
-  margin-top: 20px ;
-  margin-bottom: 20px;
-
+  margin: 20px 0; /* Consistent vertical spacing */
+  border-bottom: 1px solid #ddd; /* Adds a divider between products */
+  padding-bottom: 20px; /* Space below the product info */
 }
 
 .checkoutProduct_image {
-    object-fit: contain;
-    width: 180px;
-    height: 180px;
-       
+  object-fit: contain;
+  width: 150px; /* Slightly smaller for better spacing */
+  height: 150px; /* Matches width */
+  margin-right: 20px; /* Adds space between the image and info */
 }
 
 .checkoutproduct_info {
-  padding-left: 20px;
-  flex: 1;
+  flex: 1; /* Allows flexible width */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Aligns items vertically */
 }
 
 .checkoutProduct_title {
-  font-size: 17px;
-  font-weight: 800;
+  font-size: 18px; /* Slightly larger for readability */
+  font-weight: 600; /* Adjusted for balance */
+  margin-bottom: 5px; /* Adds spacing below the title */
 }
 
 .checkoutProduct_price {
-  margin-top: 5px;
+  font-size: 16px; /* Consistent with product details */
+  font-weight: bold; /* Highlights the price */
+  margin-top: 10px; /* Space above the price */
 }
 
 .checkoutProduct_rating {
-  display: flex;
+  margin-top: 5px;
 }
 
-.checkoutproduct_info > button {
-  background: #ff9f00;
-  border: 1px solid;
-  margin-top: 10px;
-  border-color: #a88734 #9c7e31 #846a29;
-  color: #111;
-  padding: 5px 10px;
+.checkoutProduct_rating span {
+  color: #ff9900; /* Matches the orange theme */
+  font-size: 16px; /* Ensures stars are prominent */
+}
+
+button {
+  background-color: #ff9900; /* Bright orange for CTA */
+  border: 1px solid #a88734; /* Slightly darker border */
+  color: white;
+  padding: 8px 16px; /* Makes the button larger */
+  border-radius: 4px; /* Rounded corners */
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
 }
 
-.checkoutproduct_info > button:hover {
-  background-color: #f0c14b;
-  border-color: #a88734 #9c7e31 #846a29;
+button:hover {
+  background-color: #e68a00; /* Darker orange on hover */
 }
